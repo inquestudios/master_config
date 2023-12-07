@@ -16,6 +16,7 @@ jobs:
 
     - name: Push updates to Studio Dev
       run: |
-        git remote add studio-dev https://x-access-token:${{ secrets.STUDIO_DEV_PAT }}@github.com/inquestudios/studio_dev.git
-        git fetch studio-dev
-        git push studio-dev main
+      git remote add studio-dev https://x-access-token:${{ secrets.MY_GITHUB_PAT }}@github.com/inquestudios/studio_dev.git
+      git fetch studio-dev
+      git push studio-dev main
+
