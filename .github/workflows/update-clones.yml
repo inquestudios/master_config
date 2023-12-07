@@ -1,0 +1,21 @@
+name: Update Studio Dev
+
+on:
+  push:
+    branches:
+      - main  # Assuming updates occur in the 'main' branch
+
+jobs:
+  push-to-studio-dev:
+    runs-on: ubuntu-latest  # Use a Linux based runner
+
+    steps:
+    - name: Checkout Main Repository
+      uses: actions/checkout@v2
+      # This step checks out your repository.
+
+    - name: Push updates to Studio Dev
+      run: |
+        git remote add studio-dev https://x-access-token:${{ secrets.STUDIO_DEV_PAT }}@github.com/inquestudios/studio_dev.git
+        git fetch studio-dev
+        git push studio-dev main
