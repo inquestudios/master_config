@@ -40,6 +40,28 @@ settings.tk-shell.asset_step:
     tk-multi-screeningroom: '@settings.tk-multi-screeningroom.rv'
   location: '@engines.tk-shell.location'
 
+
+
+# material
+settings.tk-shell.material:
+  apps:
+    tk-multi-launchapp: '@settings.tk-multi-launchapp'
+    tk-multi-launchmari: '@settings.tk-multi-launchapp.mari'
+    tk-multi-launchmotionbuilder: '@settings.tk-multi-launchapp.motionbuilder'
+    tk-multi-publish2: "@settings.tk-multi-publish2.standalone"
+    tk-multi-screeningroom: '@settings.tk-multi-screeningroom.rv'
+  location: '@engines.tk-shell.location'
+
+# material_step
+settings.tk-shell.material_step:
+  apps:
+    tk-multi-launchapp: '@settings.tk-multi-launchapp'
+    tk-multi-launchmari: '@settings.tk-multi-launchapp.mari'
+    tk-multi-launchmotionbuilder: '@settings.tk-multi-launchapp.motionbuilder'
+    tk-multi-publish2: "@settings.tk-multi-publish2.standalone"
+    tk-multi-screeningroom: '@settings.tk-multi-screeningroom.rv'
+  location: '@engines.tk-shell.location'
+
 # project
 settings.tk-shell.project:
   apps:

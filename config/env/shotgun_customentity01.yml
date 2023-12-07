@@ -1,4 +1,4 @@
-# Copyright (c) 2017 Shotgun Software Inc.
+## Copyright (c) 2017 Shotgun Software Inc.
 #
 # CONFIDENTIAL AND PROPRIETARY
 #
@@ -51,8 +51,8 @@ engines:
   # tk-aftereffects: "@settings.tk-aftereffects.material"
   # tk-alias: "@settings.tk-alias.material"
   # tk-vred: "@settings.tk-vred.material"
-  tk-shell: "@settings.tk-shell.material"
-  tk-shotgun: "@settings.tk-shotgun.material"
+  # tk-shell: "@settings.tk-shell.material"
+  # tk-shotgun: "@settings.tk-shotgun.material"
 
 ################################################################################
 # reference all of the common frameworks
