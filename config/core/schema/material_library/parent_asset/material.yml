@@ -15,3 +15,4 @@ entity_type: "CustomEntity01"
 # any values starting with $ are resolved into path objects
 filters:
     - { "path": "project", "relation": "is", "values": [ "$material_library" ] }
+    - { "path": "sg_master_material.CustomEntity01.code", "relation": "is", "values": [ "$parent_asset" ] }

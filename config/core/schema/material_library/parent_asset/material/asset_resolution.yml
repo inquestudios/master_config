@@ -11,3 +11,5 @@ field_name: "sg_resolution"
 
 filters:
     - { "path": "project", "relation": "is", "values": [ "$material_library" ] }
+    - { "path": "sg_master_material.CustomEntity01.code", "relation": "is", "values": [ "$parent_asset" ] }
+    - { "path": "code", "relation": "is", "values": [ "$material" ] }
