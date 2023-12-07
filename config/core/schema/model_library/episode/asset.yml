@@ -12,7 +12,7 @@
 type: "shotgun_entity"
 
 # the shotgun field to use for the folder name
-name: "code"
+name: "{sg_asset_type}/{code}/{sg_poly_level}"
 
 # the shotgun entity type to connect to
 entity_type: "Asset"
@@ -24,6 +24,6 @@ entity_type: "Asset"
 # any values starting with $ are resolved into path objects
 filters:
     - { "path": "project", "relation": "is", "values": [ "$model_library" ] }
-    - { "path": "sg_asset_type", "relation": "is", "values": [ "$asset_type" ] }
     - { "path": "sg_archetype", "relation": "is", "values": [ "$episode" ] }
+    - { "path": "sg_asset_type", "relation": "in", "values": ["Mesh", "Prop"] }
 
