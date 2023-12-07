@@ -40,7 +40,9 @@ keys:
     sg_parent_asset:
         type: str 
     sg_resolution:
-        type: str    
+        type: str 
+        shotgun_entity_type: Asset
+        shotgun_field_name: sg_resolution   
     Episode:
         type: str
     Shot:
@@ -49,6 +51,8 @@ keys:
         type: str
     sg_asset_type:
         type: str
+        shotgun_entity_type: Asset
+        shotgun_field_name: sg_asset_type
     sg_shot_type:
         type: str
     Asset:
