@@ -1,11 +1,11 @@
-type: "shotgun_entity"
+# the type of dynamic content
+type: "shotgun_step"
 
-name: "code"
+# the shotgun field to use for the folder name
+name: "short_name"
 
-entity_type: "Step"
-
-filters:
-    - { "path": "project", "relation": "is", "values": [ "$model_library" ] }
-    - { "path": "sg_asset_type", "relation": "is", "values": [ "$asset_type" ] }
-    - { "path": "sg_archetype", "relation": "is", "values": [ "$episode" ] }
-    - { "path": "step", "relation": "is", "values": [ "$step" ] }
+# filters:
+#     - { "path": "project", "relation": "is", "values": [ "$model_library" ] }
+#     - { "path": "sg_asset_type", "relation": "is", "values": [ "$asset_type" ] }
+#     - { "path": "sg_archetype", "relation": "is", "values": [ "$episode" ] }
+#     - { "path": "step", "relation": "is", "values": [ "$step" ] }

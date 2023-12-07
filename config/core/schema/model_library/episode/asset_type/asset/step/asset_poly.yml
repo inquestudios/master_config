@@ -8,5 +8,6 @@ filters:
   - { "path": "project", "relation": "is", "values": ["$model_library"] }
   - { "path": "sg_archetype", "relation": "is", "values": [ "$episode" ] }
   - { "path": "sg_asset_type", "relation": "is", "values": [ "$asset_type" ] }
+  - { "path": "code", "relation": "is", "values": [ "$asset" ] }
   
 
