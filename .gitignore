@@ -1,3 +1,8 @@
 install_location.yml
 pipeline_configuration.yml
 ._*
+__pycache__
+.*
+*.pyc
+.DS_Store
+install/

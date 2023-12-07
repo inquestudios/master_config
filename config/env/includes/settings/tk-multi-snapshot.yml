@@ -18,8 +18,13 @@ includes:
 # ---- 3dsMaxPlus
 
 settings.tk-multi-snapshot.3dsmaxplus.asset_step: &settings_tk-multi-snapshot_3dsmaxplus_asset_step
-  template_snapshot: max_asset_snapshot
-  template_work: max_asset_work
+  template_snapshot: max_asset_snapshot_model
+  template_work: max_asset_work_model
+  location: "@apps.tk-multi-snapshot.location"
+
+settings.tk-multi-snapshot.3dsmaxplus.material_step: &settings_tk-multi-snapshot_3dsmaxplus_material_step
+  template_snapshot: max_customentity01_snapshot
+  template_work: max_customentity01_work
   location: "@apps.tk-multi-snapshot.location"
 
 settings.tk-multi-snapshot.3dsmaxplus.shot_step: &settings_tk-multi-snapshot_3dsmaxplus_shot_step
