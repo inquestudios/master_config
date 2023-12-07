@@ -3,21 +3,28 @@ name: Update Studio Dev
 on:
   push:
     branches:
-      - main  # Assuming updates occur in the 'main' branch
+      - main  # This workflow triggers on a push to the 'main' branch
 
 jobs:
   push-to-studio-dev:
-    runs-on: ubuntu-latest  # Use a Linux based runner
+    runs-on: ubuntu-latest  # The type of runner that the job will run on
 
     steps:
     - name: Checkout Main Repository
       uses: actions/checkout@v2
-      # This step checks out your repository.
+      # Checks out a copy of your repository under $GITHUB_WORKSPACE
 
     - name: Push updates to Studio Dev
-run: |
-  git remote add studio-dev https://x-access-token:${{ secrets.MY_GITHUB_PAT }}@github.com/inquestudios/studio_dev.git
-  git fetch studio-dev
-  git push studio-dev main
-
-
+      run: |
+        # Configure Git to use your PAT for authentication
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        
+        # Add studio-dev as a remote repository with the URL including the PAT for authentication
+        git remote add studio-dev https://x-access-token:${{ secrets.MY_GITHUB_PAT }}@github.com/inquestudios/studio_dev.git
+        
+        # Fetch the branches and commits from the remote repository
+        git fetch studio-dev
+        
+        # Push changes from the main branch of your repository to the main branch of studio-dev
+        git push studio-dev main
