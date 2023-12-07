@@ -4,4 +4,4 @@ pipeline_configuration.yml
 __pycache__
 .*
 *.pyc
-install/*.*
+install/
