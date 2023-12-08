@@ -210,7 +210,7 @@ paths:
     sequence_root: sequences/{Sequence}
     #shot_folder: /{Episode}/{Asset}/{sg_shot_type}/{Shot}/{Step}
     model_library: /{Episode}/{sg_asset_type}/{Asset}/{sg_poly_level}/{Step}
-    material_library: /{parent_asset}/{Maertial}/{sg_resolution}/{Step}
+    material_library: /{parent_asset}/{Material}/{sg_resolution}/{Step}
 
     ##########################################################################################
     # Project level paths
