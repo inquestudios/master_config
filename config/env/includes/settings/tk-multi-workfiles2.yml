@@ -51,6 +51,39 @@ settings.tk-multi-workfiles2: &settings_tk-multi-workfiles2
       hierarchy: [step]
   location: "@apps.tk-multi-workfiles2.location"
 
+
+settings.tk-multi-workfiles2.3dsmax: &settings_tk-multi-workfiles2
+  entities:
+  - caption: Material
+    entity_type: CustomEntity01
+    hierarchy: [sg_master_material.CustomEntity01.code, sg_type, code, sg_resolution]
+    filters: 
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  - caption: Assets
+    entity_type: Asset
+    hierarchy: [sg_asset_type, code]
+    filters:
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  - caption: Shots
+    entity_type: Shot
+    filters:
+    hierarchy: [sg_sequence, code]
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  location: "@apps.tk-multi-workfiles2.location"
+
+
 # launches at startup.
 settings.tk-multi-workfiles2.launch_at_startup:
   launch_at_startup: true
@@ -79,11 +112,10 @@ settings.tk-multi-workfiles2.launch_at_startup:
 settings.tk-multi-workfiles2.launch_at_startup-3dsmax:
   launch_at_startup: true
   entities:
-  - caption: Assets - Material
-    entity_type: Asset
-    hierarchy: [sg_asset_type, code]
+  - caption: Material
+    entity_type: CustomEntity01
+    hierarchy: [sg_master_material.CustomEntity01.code, sg_type, code, sg_resolution]
     filters: 
-      - [sg_asset_type, in, ["VariantMaterial", "MasterMaterial"]]
     sub_hierarchy:
       entity_type: Task
       filters:
@@ -120,10 +152,20 @@ settings.tk-multi-workfiles2.3dsmaxplus.asset_step: &settings_tk-multi-workfiles
   template_work: max_asset_work_model
   template_work_area: asset_work_area_max_model
   entities:
+  - caption: Material
+    entity_type: CustomEntity01
+    hierarchy: [sg_master_material.CustomEntity01.code, sg_type, code, sg_resolution]
+    filters: 
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
   - caption: Assets
     entity_type: Asset
     hierarchy: [sg_asset_type, code]
     filters:
+      - [sg_asset_type, in, ["Mesh", "Prop"]]
     sub_hierarchy:
       entity_type: Task
       filters:
@@ -146,10 +188,20 @@ settings.tk-multi-workfiles2.3dsmaxplus.material_step: &settings_tk-multi-workfi
   template_work: max_customentity01_work
   template_work_area: customentity01_work_area_max
   entities:
+  - caption: Material
+    entity_type: CustomEntity01
+    hierarchy: [sg_master_material.CustomEntity01.code, sg_type, code, sg_resolution]
+    filters: 
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
   - caption: Assets
     entity_type: Asset
     hierarchy: [sg_asset_type, code]
     filters:
+      - [sg_asset_type, in, ["Mesh", "Prop"]]
     sub_hierarchy:
       entity_type: Task
       filters:
@@ -172,10 +224,20 @@ settings.tk-multi-workfiles2.3dsmaxplus.shot_step: &settings_tk-multi-workfiles2
   template_work: max_shot_work
   template_work_area: shot_work_area_max
   entities:
+  - caption: Material
+    entity_type: CustomEntity01
+    hierarchy: [sg_master_material.CustomEntity01.code, sg_type, code, sg_resolution]
+    filters: 
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
   - caption: Assets
     entity_type: Asset
     hierarchy: [sg_asset_type, code]
     filters:
+      - [sg_asset_type, in, ["Mesh", "Prop"]]
     sub_hierarchy:
       entity_type: Task
       filters:
@@ -205,70 +267,12 @@ settings.tk-multi-workfiles2.3dsmax.asset_step:
   hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
 
 settings.tk-multi-workfiles2.3dsmax.material_step:
+  <<: *settings_tk-multi-workfiles2_3dsmaxplus_material_step
   hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
 
 settings.tk-multi-workfiles2.3dsmax.shot_step:
   <<: *settings_tk-multi-workfiles2_3dsmaxplus_shot_step
   hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
-
-  # asset_step Model
-settings.tk-multi-workfiles2.3dsmax.asset_step-model:
-  hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
-  template_publish: max_asset_publish_model
-  template_publish_area: asset_publish_area_max_model
-  template_work: max_asset_work_model
-  template_work_area: asset_work_area_max_model
-  entities:
-  - caption: Assets - Material
-    entity_type: Asset
-    hierarchy: [sg_asset_type, code]
-    filters: 
-      - [sg_asset_type, in, ["VariantMaterial", "MasterMaterial"]]
-    sub_hierarchy:
-      entity_type: Task
-      filters:
-      link_field: entity
-      hierarchy: [step]
-  - caption: Assets - Model
-    entity_type: Asset
-    hierarchy: [sg_asset_type, code]
-    filters: 
-      - [sg_asset_type, in, ["Mesh", "Prop"]]
-    sub_hierarchy:
-      entity_type: Task
-      filters:
-      link_field: entity
-      hierarchy: [step]
-  - caption: Shots
-    entity_type: Shot
-    filters:
-    hierarchy: [sg_sequence, code]
-    sub_hierarchy:
-      entity_type: Task
-      filters:
-      link_field: entity
-      hierarchy: [step]
-  location: "@apps.tk-multi-workfiles2.location"
-
-# Material Step (Material)
-settings.tk-multi-workfiles2.3dsmax.material_step:
-  hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
-  template_publish: max_material_publish
-  template_publish_area: material_publish_area_max
-  template_work: max_material_work
-  template_work_area: material_work_area_max
-  entities:
-  - caption: Material
-    entity_type: CustomEntity01
-    hierarchy: [sg_type, code]
-    filters: 
-      - [sg_type, in, ["VariantMaterial", "MasterMaterial"]]
-    sub_hierarchy:
-      entity_type: Task
-      filters:
-      link_field: entity
-      hierarchy: [step]
-
 
 ################################################################################
 

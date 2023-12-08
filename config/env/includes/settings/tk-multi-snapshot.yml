@@ -48,12 +48,6 @@ settings.tk-multi-snapshot.3dsmax.asset_step-model:
   template_snapshot: max_asset_snapshot_model
   template_work: max_asset_work
   location: "@apps.tk-multi-snapshot.location"
-
-# asset step - Material
-settings.tk-multi-snapshot.3dsmax.asset_step-material:
-  template_snapshot: max_asset_snapshot_material
-  template_work: max_asset_work
-  location: "@apps.tk-multi-snapshot.location"
   
 # customentity01 - Material Step
 settings.tk-multi-snapshot.3dsmax.material_step:

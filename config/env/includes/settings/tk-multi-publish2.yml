@@ -116,89 +116,12 @@ settings.tk-multi-publish2.3dsmaxplus.shot_step: &settings_tk-multi-publish2_3ds
 
 # Uses the exact same settings. The {engine} resolves the hook at the right location.
 # asset step
-settings.tk-multi-publish2.3dsmax.asset_step: *settings_tk-multi-publish2_3dsmaxplus_asset_step
+settings.tk-multi-publish2.3dsmax.asset_step-model: *settings_tk-multi-publish2_3dsmaxplus_asset_step
 # shot step
 settings.tk-multi-publish2.3dsmax.shot_step: *settings_tk-multi-publish2_3dsmaxplus_shot_step
 # material step
 settings.tk-multi-publish2.3dsmax.material_step: *settings_tk-multi-publish2_3dsmaxplus_material_step
 
-# asset step Model
-settings.tk-multi-publish2.3dsmax.asset_step-model:
-  collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
-  collector_settings:
-      Work Template: max_asset_work_model
-  publish_plugins:
-  - name: Publish to ShotGrid
-    hook: "{self}/publish_file.py"
-    settings: {}
-  - name: Upload for review
-    hook: "{self}/upload_version.py"
-    settings: {}
-  - name: Begin file versioning
-    hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
-    settings: {}
-  - name: Publish to ShotGrid
-    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
-    settings:
-        Publish Template: max_asset_publish_model
-  - name: Publish to ShotGrid
-    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session_geometry.py"
-    settings:
-        Publish Template: asset_alembic_cache_model
-  help_url: *help_url
-  location: "@apps.tk-multi-publish2.location"
-
-# asset step Material
-settings.tk-multi-publish2.3dsmax.asset_step-material:
-  collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
-  collector_settings:
-      Work Template: max_asset_work_material
-  publish_plugins:
-  - name: Publish to ShotGrid
-    hook: "{self}/publish_file.py"
-    settings: {}
-  - name: Upload for review
-    hook: "{self}/upload_version.py"
-    settings: {}
-  - name: Begin file versioning
-    hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
-    settings: {}
-  - name: Publish to ShotGrid
-    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
-    settings:
-        Publish Template: max_asset_publish_material
-  - name: Publish to ShotGrid
-    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session_geometry.py"
-    settings:
-        Publish Template: asset_alembic_cache_material
-  help_url: *help_url
-  location: "@apps.tk-multi-publish2.location"
-  
-# customentity01 step Material Step
-settings.tk-multi-publish2.3dsmax.material_step:
-  collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
-  collector_settings:
-      Work Template: max_material_step_work
-  publish_plugins:
-  - name: Publish to ShotGrid
-    hook: "{self}/publish_file.py"
-    settings: {}
-  - name: Upload for review
-    hook: "{self}/upload_version.py"
-    settings: {}
-  - name: Begin file versioning
-    hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
-    settings: {}
-  - name: Publish to ShotGrid
-    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
-    settings:
-        Publish Template: max_material_step_publish_material
-  - name: Publish to ShotGrid
-    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session_geometry.py"
-    settings:
-        Publish Template: asset_alembic_cache_material
-  help_url: *help_url
-  location: "@apps.tk-multi-publish2.location" 
 ################################################################################
 
 # ---- Houdini
