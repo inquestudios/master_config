@@ -114,7 +114,7 @@ settings.tk-multi-workfiles2.launch_at_startup-3dsmax:
   entities:
   - caption: Material
     entity_type: CustomEntity01
-    hierarchy: [sg_master_material.CustomEntity01.code, sg_type, code, sg_resolution]
+    hierarchy: [sg_master_material.CustomEntity01.code, sg_type, code]
     filters: 
     sub_hierarchy:
       entity_type: Task
