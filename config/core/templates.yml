@@ -381,45 +381,45 @@ paths:
 
     # define the location of a work area
     asset_work_area_max_model:
-        definition: '@model_library/step/work'
+        definition: '@model_library/work'
         root_name: 'model_library'
     # define the location of a publish area
     asset_publish_area_max_model:
-        definition: '@model_library/step/publish'
+        definition: '@model_library/publish'
         root_name: 'model_library'
     # The location of WIP files
     max_asset_work_model:
-        definition: '@model_library/step/work/{Asset}.v{version}.max'
+        definition: '@model_library/work/{Asset}.v{version}.max'
         root_name: 'model_library'
     # The location of backups of WIP files
     max_asset_snapshot_model:
-        definition: '@model_library/step/work/snapshots/{Asset}.v{version}.{timestamp}.max'
+        definition: '@model_library/work/snapshots/{Asset}.v{version}.{timestamp}.max'
         root_name: 'model_library'
     # The location of published max files
     max_asset_publish_model:
-        definition: '@model_library/step/publish/{Asset}.v{version}.max'
+        definition: '@model_library/publish/{Asset}.v{version}.max'
         root_name: 'model_library'
 
     # Material
     # define the location of a work area
     customentity01_work_area_max:
-        definition: '@material_library/step/mats/work'
+        definition: '@material_library/mats/work'
         root_name: 'material_library'
     # define the location of a publish area
     customentity01_publish_area_max:
-        definition: '@material_library/step/mats/publish'
+        definition: '@material_library/mats/publish'
         root_name: 'material_library'
     # The location of WIP files
     max_customentity01_work:
-        definition: '@material_library/step/mats/work/{name}.v{version}.mat'
+        definition: '@material_library/mats/work/{name}.v{version}.mat'
         root_name: 'material_library'
     # The location of backups of WIP files
     max_customentity01_snapshot:
-        definition: '@material_library/step/mats/work/snapshots/{name}.v{version}.{timestamp}.mat'
+        definition: '@material_library/mats/work/snapshots/{name}.v{version}.{timestamp}.mat'
         root_name: 'material_library'
     # The location of published max files
     max_customentity01_publish:
-        definition: '@material_library/step/mats/publish/{name}.v{version}.mat'
+        definition: '@material_library/mats/publish/{name}.v{version}.mat'
         root_name: 'material_library'
 
     # define the location of a work area
