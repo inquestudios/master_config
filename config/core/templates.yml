@@ -206,7 +206,7 @@ paths:
     # These don't require the standard formatting (with definition and root_name) because they
     # will be set within each template that uses the alias.
     shot_root: sequences/{Sequence}/{Shot}/{Step}
-    asset_root: /{Episode}/{sg_asset_type}/{Asset}/{Step}
+    asset_root: /{Episode}/{sg_asset_type}/{Asset}
     sequence_root: sequences/{Sequence}
     #shot_folder: /{Episode}/{Asset}/{sg_shot_type}/{Shot}/{Step}
     model_library: /{Episode}/{sg_asset_type}/{Asset}/{Step}
@@ -668,25 +668,25 @@ paths:
     #
 
     # define the location of a work area
-    asset_work_area_max:
-        definition: '@model_library/step/work'
-        root_name: 'model_library'
+    #asset_work_area_max:
+    #    definition: '@asset_root/step/work'
+    #    root_name: 'model_library'
     # define the location of a publish area
-    asset_publish_area_max:
-        definition: '@model_library/step/publish'
-        root_name: 'model_library'
+    #asset_publish_area_max:
+    #    definition: '@asset_root/step/publish'
+    #    root_name: 'model_library'
     # The location of WIP files
-    max_asset_work:
-        definition: '@model_library/step/work/{Asset}.v{version}.max'
-        root_name: 'model_library'
+    #max_asset_work:
+    #    definition: '@asset_root/step/work/{Asset}.v{version}.max'
+    #    root_name: 'model_library'
     # The location of backups of WIP files
-    max_asset_snapshot:
-       definition: '@model_library/step/work/snapshots/{Asset}.v{version}.{timestamp}.max'
-       root_name: 'model_library'
+    #max_asset_snapshot:
+    #   definition: '@asset_root/step/work/snapshots/{Asset}.v{version}.{timestamp}.max'
+    #   root_name: 'model_library'
     # The location of published max files
-    max_asset_publish:
-        definition: '@model_library/step/publish/{Asset}.v{version}.max'
-        root_name: 'model_library'
+    #max_asset_publish:
+    #    definition: '@asset_root/step/publish/{Asset}.v{version}.max'
+    #    root_name: 'model_library'
 
 
 
