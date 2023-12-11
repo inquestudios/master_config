@@ -66,6 +66,20 @@ settings.tk-3dsmaxplus.material:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   location: "@engines.tk-3dsmaxplus.location"
 
+# Scene
+settings.tk-3dsmaxplus.scene:
+  apps:
+    tk-multi-about:
+      location: "@apps.tk-multi-about.location"
+    tk-multi-pythonconsole:
+      location: "@apps.tk-multi-pythonconsole.location"
+    tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
+    tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel"
+    tk-multi-workfiles2: "@settings.tk-multi-workfiles2.3dsmax"
+  menu_favourites:
+  - {app_instance: tk-multi-workfiles2, name: File Open...}
+  location: "@engines.tk-3dsmaxplus.location"
+
 # asset_step
 settings.tk-3dsmaxplus.material_step:
   apps:

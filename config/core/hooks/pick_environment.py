@@ -30,6 +30,8 @@ class PickEnvironment(Hook):
                 return "playlist"
             elif context.source_entity["type"] == "CustomEntity01":
                 return "material"
+            elif context.source_entity["type"] == "CustomEntity02":
+                return "scene"              
 
         if context.project is None:
             # Our context is completely empty. We're going into the site context.
@@ -51,6 +53,8 @@ class PickEnvironment(Hook):
                 return "episode" 
             if context.entity["type"] == "CustomEntity01": 
                 return "material"
+            if context.entity["type"] == "CustomEntity02": 
+                return "scene"
 
         if context.entity and context.step:
             # We have a step and an entity.
@@ -60,5 +64,6 @@ class PickEnvironment(Hook):
                 return "asset_step"
             if context.entity["type"] == "CustomEntity01":
                 return "material_step"
-
+            if context.entity["type"] == "CustomEntity02":
+                return "scene_step"
         return None

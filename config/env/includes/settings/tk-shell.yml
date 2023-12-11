@@ -98,3 +98,22 @@ settings.tk-shell.material_step:
     tk-multi-publish2: "@settings.tk-multi-publish2.standalone"
     tk-multi-screeningroom: '@settings.tk-multi-screeningroom.rv'
   location: '@engines.tk-shell.location'
+
+# customentity02 Scene
+settings.tk-shell.scene:
+  apps:
+    tk-multi-launchapp: '@settings.tk-multi-launchapp'
+    tk-multi-launchmari: '@settings.tk-multi-launchapp.mari'
+    tk-multi-launchmotionbuilder: '@settings.tk-multi-launchapp.motionbuilder'
+    tk-multi-publish2: "@settings.tk-multi-publish2.standalone"
+    tk-multi-screeningroom: '@settings.tk-multi-screeningroom.rv'
+  location: '@engines.tk-shell.location'
+
+  # customentity02 Scene Step
+settings.tk-shell.scene_step:
+  apps:
+    tk-multi-launchapp: '@settings.tk-multi-launchapp'
+    tk-multi-launchmotionbuilder: '@settings.tk-multi-launchapp.motionbuilder'
+    tk-multi-publish2: "@settings.tk-multi-publish2.standalone"
+    tk-multi-screeningroom: '@settings.tk-multi-screeningroom.rv'
+  location: '@engines.tk-shell.location'

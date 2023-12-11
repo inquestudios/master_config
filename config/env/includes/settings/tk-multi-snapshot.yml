@@ -27,6 +27,11 @@ settings.tk-multi-snapshot.3dsmaxplus.material_step: &settings_tk-multi-snapshot
   template_work: max_customentity01_work
   location: "@apps.tk-multi-snapshot.location"
 
+settings.tk-multi-snapshot.3dsmaxplus.scene_step: &settings_tk-multi-snapshot_3dsmaxplus_scene_step
+  template_snapshot: max_customentity02_snapshot
+  template_work: max_customentity02_work
+  location: "@apps.tk-multi-snapshot.location"
+
 settings.tk-multi-snapshot.3dsmaxplus.shot_step: &settings_tk-multi-snapshot_3dsmaxplus_shot_step
   template_snapshot: max_shot_snapshot
   template_work: max_shot_work
@@ -54,7 +59,13 @@ settings.tk-multi-snapshot.3dsmax.material_step:
   template_snapshot: max_material__snapshot
   template_work: max_material_work
   location: "@apps.tk-multi-snapshot.location"  
-  
+
+ # customentity01 - Scene Step
+settings.tk-multi-snapshot.3dsmax.scene_step:
+  template_snapshot: max_scene__snapshot
+  template_work: max_scene_work
+  location: "@apps.tk-multi-snapshot.location"  
+
 # shot step
 settings.tk-multi-snapshot.3dsmax.shot_step:
   template_snapshot: max_shot_snapshot
