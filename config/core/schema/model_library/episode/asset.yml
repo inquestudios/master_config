@@ -12,7 +12,7 @@
 type: "shotgun_entity"
 
 # the shotgun field to use for the folder name
-name: "{sg_asset_type}/{code}/{sg_poly_level}"
+name: "{sg_asset_type}/{code}"
 
 # the shotgun entity type to connect to
 entity_type: "Asset"
