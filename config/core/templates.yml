@@ -399,7 +399,7 @@ paths:
         root_name: 'model_library'
     # The location of WIP files
     max_asset_work_model:
-        definition: '@model_shared_steps_librarymodel_shared_steps_library/work/{Asset}.v{version}.max'
+        definition: '@model_shared_steps_library/work/{Asset}.v{version}.max'
         root_name: 'model_library'
     # The location of backups of WIP files
     max_asset_snapshot_model:
