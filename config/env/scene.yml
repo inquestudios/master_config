@@ -9,12 +9,12 @@
 # not expressly granted therein are reserved by Shotgun Software Inc.
 #
 
-description: Apps and engines loaded when an customentity01 is loaded. Since std VFX
+description: Apps and engines loaded when an customentity02 is loaded. Since std VFX
   config template has a file system structure which is centered around pipeline
   steps, this environment is largely empty. Most of the work takes place on a
-  level in the file system where both an customentity01 and a pipeline step is available
-  - e.g customentity01 Hero, modeling, so all apps for loading, publishing etc. are
-  located in the customentity01_step environment. This environment mostly contains
+  level in the file system where both an customentity02 and a pipeline step is available
+  - e.g customentity02 Hero, modeling, so all apps for loading, publishing etc. are
+  located in the customentity02_step environment. This environment mostly contains
   utility apps and the tank work files app, which lets you choose a task to work
   on and load associated content into an application.
 
@@ -37,22 +37,22 @@ includes:
 - ./includes/settings/tk-shotgun.yml
 
 ################################################################################
-# configuration for all engines to load in an scene context
+# configuration for all engines to load in an customentity02 context
 
 engines:
-  tk-3dsmaxplus: "@settings.tk-3dsmaxplus.scene"
-  tk-3dsmax: "@settings.tk-3dsmax.scene"
-  # tk-houdini: "@settings.tk-houdini.material"
-  # tk-mari: "@settings.tk-mari.material"
-  # tk-maya: "@settings.tk-maya.material"
-  # tk-motionbuilder: "@settings.tk-motionbuilder.material"
-  # tk-nuke: "@settings.tk-nuke.material"
-  # tk-photoshopcc: "@settings.tk-photoshopcc.material"
-  # tk-aftereffects: "@settings.tk-aftereffects.material"
-  # tk-alias: "@settings.tk-alias.material"
-  # tk-vred: "@settings.tk-vred.material"
-  tk-shell: "@settings.tk-shell.scene"
-  tk-shotgun: "@settings.tk-shotgun.scene"
+  tk-3dsmaxplus: "@settings.tk-3dsmaxplus.customentity02"
+  tk-3dsmax: "@settings.tk-3dsmax.customentity02"
+  tk-houdini: "@settings.tk-houdini.customentity02"
+  tk-mari: "@settings.tk-mari.customentity02"
+  tk-maya: "@settings.tk-maya.customentity02"
+  tk-motionbuilder: "@settings.tk-motionbuilder.customentity02"
+  tk-nuke: "@settings.tk-nuke.customentity02"
+  tk-photoshopcc: "@settings.tk-photoshopcc.customentity02"
+  tk-aftereffects: "@settings.tk-aftereffects.customentity02"
+  tk-alias: "@settings.tk-alias.customentity02"
+  tk-vred: "@settings.tk-vred.customentity02"
+  tk-shell: "@settings.tk-shell.customentity02"
+  tk-shotgun: "@settings.tk-shotgun.customentity02"
 
 ################################################################################
 # reference all of the common frameworks
