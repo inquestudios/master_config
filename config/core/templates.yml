@@ -426,23 +426,23 @@ paths:
  # Scene
     # define the location of a work area
     customentity02_work_area_max:
-        definition: '@scene_library/mats/work'
+        definition: '@scene_library/work'
         root_name: 'scene_library'
     # define the location of a publish area
     customentity02_publish_area_max:
-        definition: '@scene_library/mats/publish'
+        definition: '@scene_library/publish'
         root_name: 'scene_library'
     # The location of WIP files
     max_customentity02_work:
-        definition: '@scene_library/mats/work/{name}.v{version}.mat'
+        definition: '@scene_library/work/{name}.v{version}.max'
         root_name: 'scene_library'
     # The location of backups of WIP files
     max_customentity02_snapshot:
-        definition: '@scene_library/mats/work/snapshots/{name}.v{version}.{timestamp}.mat'
+        definition: '@scene_library/work/snapshots/{name}.v{version}.{timestamp}.max'
         root_name: 'scene_library'
     # The location of published max files
     max_customentity02_publish:
-        definition: '@scene_library/mats/publish/{name}.v{version}.mat'
+        definition: '@scene_library/publish/{name}.v{version}.max'
         root_name: 'scene_library'
 
 
