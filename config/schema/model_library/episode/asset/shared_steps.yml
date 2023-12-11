@@ -1,8 +1,0 @@
-# the type of dynamic content
-type: "static"
-
-# the shotgun field to use for the folder name
-name: "shared_steps"
-
-filters:
-    - { "path": "step.Step.short_name", "relation": "in", "values": [ "UID", "MDL", "UUW", "REF" ] }
