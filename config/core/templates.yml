@@ -45,6 +45,8 @@ keys:
         shotgun_field_name: sg_resolution   
     Episode:
         type: str
+    Scene:
+        type: str
     Shot:
         type: str
     Step:
