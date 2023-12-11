@@ -211,6 +211,7 @@ paths:
     #shot_folder: /{Episode}/{Asset}/{sg_shot_type}/{Shot}/{Step}
     model_library: /{Episode}/{sg_asset_type}/{Asset}/{Step}
     material_library: /{parent_asset}/{Material}/{Step}
+    scene_library: /{Scene}/{Step}
 
     ##########################################################################################
     # Project level paths
@@ -421,6 +422,29 @@ paths:
     max_customentity01_publish:
         definition: '@material_library/mats/publish/{name}.v{version}.mat'
         root_name: 'material_library'
+
+ # Scene
+    # define the location of a work area
+    customentity02_work_area_max:
+        definition: '@scene_library/mats/work'
+        root_name: 'scene_library'
+    # define the location of a publish area
+    customentity02_publish_area_max:
+        definition: '@scene_library/mats/publish'
+        root_name: 'scene_library'
+    # The location of WIP files
+    max_customentity02_work:
+        definition: '@scene_library/mats/work/{name}.v{version}.mat'
+        root_name: 'scene_library'
+    # The location of backups of WIP files
+    max_customentity02_snapshot:
+        definition: '@scene_library/mats/work/snapshots/{name}.v{version}.{timestamp}.mat'
+        root_name: 'scene_library'
+    # The location of published max files
+    max_customentity02_publish:
+        definition: '@scene_library/mats/publish/{name}.v{version}.mat'
+        root_name: 'scene_library'
+
 
     # define the location of a work area
     shot_work_area_max:

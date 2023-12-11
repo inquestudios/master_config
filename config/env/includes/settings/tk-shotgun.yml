@@ -64,6 +64,25 @@ settings.tk-shotgun.material_step:
     tk-shotgun-launchfolder: "@settings.tk-shotgun-launchfolder"
   location: "@engines.tk-shotgun.location"
 
+
+# custom entity 02 Scene
+settings.tk-shotgun.scene:
+  apps:
+    tk-multi-launchapp: "@settings.tk-multi-launchapp.shotgun"
+    tk-multi-publish2: "@settings.tk-multi-publish2.standalone"
+    tk-shotgun-folders: "@settings.tk-shotgun-folders"
+    tk-shotgun-launchfolder: "@settings.tk-shotgun-launchfolder"
+  location: "@engines.tk-shotgun.location"
+
+# custom entity 02 Scene Step
+settings.tk-shotgun.scene_step:
+  apps:
+    tk-multi-launchapp: "@settings.tk-multi-launchapp.shotgun"
+    tk-multi-publish2: "@settings.tk-multi-publish2.standalone"
+    tk-shotgun-folders: "@settings.tk-shotgun-folders"
+    tk-shotgun-launchfolder: "@settings.tk-shotgun-launchfolder"
+  location: "@engines.tk-shotgun.location"
+
 # playlist
 settings.tk-shotgun.playlist:
   apps:
