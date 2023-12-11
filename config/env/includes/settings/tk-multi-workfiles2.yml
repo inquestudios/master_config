@@ -218,6 +218,55 @@ settings.tk-multi-workfiles2.3dsmaxplus.material_step: &settings_tk-multi-workfi
       hierarchy: [step]
   location: "@apps.tk-multi-workfiles2.location"
 
+settings.tk-multi-workfiles2.3dsmaxplus.scene_step: &settings_tk-multi-workfiles2_3dsmaxplus_scene_step
+  template_publish: max_customentity02_publish
+  template_publish_area: customentity02_publish_area_max
+  template_work: max_customentity02_work
+  template_work_area: customentity02_work_area_max
+  entities:
+  - caption: Scene
+    entity_type: CustomEntity02
+    hierarchy: [CustomEntity02.code]
+    filters: 
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  - caption: Assets
+    entity_type: Asset
+    hierarchy: [sg_asset_type, code]
+    filters:
+  - caption: Material
+    entity_type: CustomEntity0
+    hierarchy: [sg_master_material.CustomEntity01.code, sg_type, code, sg_resolution]
+    filters: 
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  - caption: Assets
+    entity_type: Asset
+    hierarchy: [sg_asset_type, code]
+    filters:
+      - [sg_asset_type, in, ["Mesh", "Prop"]]
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  - caption: Shots
+    entity_type: Shot
+    filters:
+    hierarchy: [sg_sequence, code]
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  location: "@apps.tk-multi-workfiles2.location"
+
 settings.tk-multi-workfiles2.3dsmaxplus.shot_step: &settings_tk-multi-workfiles2_3dsmaxplus_shot_step
   template_publish: max_shot_publish
   template_publish_area: shot_publish_area_max
@@ -268,6 +317,10 @@ settings.tk-multi-workfiles2.3dsmax.asset_step-model:
 
 settings.tk-multi-workfiles2.3dsmax.material_step:
   <<: *settings_tk-multi-workfiles2_3dsmaxplus_material_step
+  hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
+
+settings.tk-multi-workfiles2.3dsmax.scene_step:
+  <<: *settings_tk-multi-workfiles2_3dsmaxplus_scene_step
   hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
 
 settings.tk-multi-workfiles2.3dsmax.shot_step:
