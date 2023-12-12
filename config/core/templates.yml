@@ -27,10 +27,6 @@
 # {Shot}. The section below tells Sgtk which data types and formats to expect for each key.
 #
 keys:
-    parent_asset:
-        type: str 
-        shotgun_entity_type: CustomEntity01
-        shotgun_field_name: sg_master_material.CustomEntity01.code 
     Sequence:
         type: str
     max_extension:
@@ -39,16 +35,34 @@ keys:
         type: str
         shotgun_entity_type: Asset
         shotgun_field_name: sg_poly_level
-    sg_master_material:
-        type: str 
     sg_resolution:
         type: str 
         shotgun_entity_type: CustomEntity01
         shotgun_field_name: sg_resolution   
+    asset_name:
+        type: str
+        shotgun_entity_type: Asset
+        shotgun_field_name: code
+    Material:
+        type: str
+        shotgun_entity_type: CustomEntity01
+        shotgun_field_name: code
+    parent_asset:
+        type: str 
+        shotgun_entity_type: CustomEntity01
+        shotgun_field_name: sg_master_material.CustomEntity01.code 
+    task_name:
+        type: str
+        shotgun_entity_type: Task
+        shotgun_field_name: content
     Episode:
         type: str
+        shotgun_entity_type: Episode
+        shotgun_field_name: code
     Scene:
         type: str
+        shotgun_entity_type: CustomEntity02
+        shotgun_field_name: code
     Shot:
         type: str
     shared_steps:
@@ -59,14 +73,20 @@ keys:
         type: str
     Step:
         type: str
+        shotgun_entity_type: Step
+        shotgun_field_name: short_name
     sg_asset_type:
         type: str
         shotgun_entity_type: Asset
         shotgun_field_name: sg_asset_type
     sg_shot_type:
         type: str
+        shotgun_entity_type: Shot
+        shotgun_field_name: sg_shot_type
     Asset:
         type: str
+        shotgun_entity_type: Asset
+        shotgun_field_name: code
     name:
         type: str
         filter_by: alphanumeric
@@ -151,18 +171,6 @@ keys:
     mari.project_name:
         type: str
         alias: name
-    asset_name:
-        type: str
-        shotgun_entity_type: Asset
-        shotgun_field_name: code
-    Material:
-        type: str
-        shotgun_entity_type: CustomEntity01
-        shotgun_field_name: code
-    task_name:
-        type: str
-        shotgun_entity_type: Task
-        shotgun_field_name: content
 
     # Maya supports two extension types.
     maya_extension:
