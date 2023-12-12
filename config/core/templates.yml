@@ -27,6 +27,10 @@
 # {Shot}. The section below tells Sgtk which data types and formats to expect for each key.
 #
 keys:
+    parent_asset:
+        type: str 
+        shotgun_entity_type: CustomEntity01
+        shotgun_field_name: sg_master_material.CustomEntity01.code 
     Sequence:
         type: str
     max_extension:
