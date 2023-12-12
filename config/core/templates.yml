@@ -41,8 +41,6 @@ keys:
         shotgun_field_name: sg_poly_level
     sg_master_material:
         type: str 
-    parent_asset:
-        type: str 
     sg_resolution:
         type: str 
         shotgun_entity_type: CustomEntity01
@@ -403,7 +401,7 @@ paths:
         root_name: 'model_library'
     # The location of WIP files
     max_asset_work_model:
-        definition: '@model_shared_steps_library/work/{Asset}.v{version}.max'
+        definition: '@model_shared_steps_librarymodel_shared_steps_library/work/{Asset}.v{version}.max'
         root_name: 'model_library'
     # The location of backups of WIP files
     max_asset_snapshot_model:

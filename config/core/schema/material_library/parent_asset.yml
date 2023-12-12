@@ -5,4 +5,4 @@ entity_type: "CustomEntity01"
 name: "{sg_master_material.CustomEntity01.code}/{code}/{sg_resolution}"  # This might be a placeholder or actual folder name you want to use
 filters:
   - { "path": "project", "relation": "is", "values": ["$material_library"] }
-  - { "path": "sg_type", "relation": "in", "values": ["VariantMaterial", "MasterMaterial"] }
+  - { "path": "sg_type", "relation": "in", "values": ["VariantMaterial", "MasterMaterial"] }    
