@@ -57,8 +57,8 @@ keys:
         shotgun_field_name: content
     Episode:
         type: str
-        shotgun_entity_type: Episode
-        shotgun_field_name: code
+        shotgun_entity_type: Asset
+        shotgun_field_name: sg_archetype.Episode.code
     Scene:
         type: str
         shotgun_entity_type: CustomEntity02
