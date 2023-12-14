@@ -90,7 +90,7 @@ settings.tk-shell.material:
     tk-multi-screeningroom: '@settings.tk-multi-screeningroom.rv'
   location: '@engines.tk-shell.location'
 
-  # customentity01 Material Step
+  # customentity03 Material Step
 settings.tk-shell.material_step:
   apps:
     tk-multi-launchapp: '@settings.tk-multi-launchapp'

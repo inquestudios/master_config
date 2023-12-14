@@ -23,8 +23,8 @@ settings.tk-multi-snapshot.3dsmaxplus.asset_step: &settings_tk-multi-snapshot_3d
   location: "@apps.tk-multi-snapshot.location"
 
 settings.tk-multi-snapshot.3dsmaxplus.material_step: &settings_tk-multi-snapshot_3dsmaxplus_material_step
-  template_snapshot: max_customentity01_snapshot
-  template_work: max_customentity01_work
+  template_snapshot: max_customentity03_snapshot
+  template_work: max_customentity03_work
   location: "@apps.tk-multi-snapshot.location"
 
 settings.tk-multi-snapshot.3dsmaxplus.scene_step: &settings_tk-multi-snapshot_3dsmaxplus_scene_step
@@ -49,21 +49,21 @@ settings.tk-multi-snapshot.3dsmaxplus.shot_step: &settings_tk-multi-snapshot_3ds
 # hook_scene_operation: "{engine}/tk-multi-snapshot/basic/scene_operation.py"
 
 # asset step - Model
-settings.tk-multi-snapshot.3dsmax.asset_step-model:
+settings.tk-multi-snapshot.3dsmax.asset_step:
   template_snapshot: max_asset_snapshot_model
-  template_work: max_asset_work
+  template_work: max_asset_work_model
   location: "@apps.tk-multi-snapshot.location"
   
 # customentity01 - Material Step
 settings.tk-multi-snapshot.3dsmax.material_step:
-  template_snapshot: max_material__snapshot
-  template_work: max_material_work
+  template_snapshot: max_customentity03_snapshot
+  template_work: max_customentity03_work
   location: "@apps.tk-multi-snapshot.location"  
 
  # customentity01 - Scene Step
 settings.tk-multi-snapshot.3dsmax.scene_step:
-  template_snapshot: max_scene__snapshot
-  template_work: max_scene_work
+  template_snapshot: max_customentity02_snapshot
+  template_work: max_customentity02_snapshot
   location: "@apps.tk-multi-snapshot.location"  
 
 # shot step

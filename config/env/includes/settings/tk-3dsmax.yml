@@ -125,11 +125,11 @@ settings.tk-3dsmax.asset_step:
       location: "@apps.tk-multi-breakdown.location"
     tk-multi-breakdown2: "@settings.tk-multi-breakdown2.3dsmax"
     tk-multi-loader2: "@settings.tk-multi-loader2.3dsmax"
-    tk-multi-publish2: "@settings.tk-multi-publish2.3dsmax.asset_step-model"
+    tk-multi-publish2: "@settings.tk-multi-publish2.3dsmax.asset_step"
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel.3dsmax"
-    tk-multi-snapshot: "@settings.tk-multi-snapshot.3dsmax.asset_step-model"
-    tk-multi-workfiles2: "@settings.tk-multi-workfiles2.3dsmax.asset_step-model"
+    tk-multi-snapshot: "@settings.tk-multi-snapshot.3dsmax.asset_step"
+    tk-multi-workfiles2: "@settings.tk-multi-workfiles2.3dsmax.asset_step"
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   - {app_instance: tk-multi-snapshot, name: Snapshot...}
