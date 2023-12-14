@@ -1,5 +1,5 @@
 # the type of dynamic content
-type: "static"
+type: "shotgun_step"
 
 # the shotgun field to use for the folder name
 name: "other_steps"
